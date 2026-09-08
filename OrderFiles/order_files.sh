@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# Variables
 catalog_dir=("Web" "Scripts" "Images" "Documents")
 current_dir=$(pwd)
 current_dir_files=($(ls | awk -F'.' '{print $2}' | uniq -u))
@@ -33,10 +34,6 @@ ask_personal_dirs() {
 	fi
 
 }
-
-# Web: js, html, css
-# Imagese: png, jpg, ...
-# Documents: pdf , word....
 
 count_of_each_file() {
 	declare -A directories
