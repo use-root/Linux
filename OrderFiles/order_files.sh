@@ -24,13 +24,10 @@ ask_personal_dirs() {
 	read option
 	if [ -z $option ]; then
 		echo -e "\n[!] Estas de broma?, chao"
-		exit 127
 	fi
 
 	if [ $option == "yes" ]; then
 		add_personal_dirs
-	else
-		exit 1
 	fi
 
 }
@@ -62,7 +59,7 @@ count_of_each_file() {
 }
 
 main() {
-	#ask_personal_dirs
+	ask_personal_dirs
 	count_of_each_file
 }
 
